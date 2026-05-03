@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Film Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#top" class="brand">Film Celebration</a>
+      <nav aria-label="主导航">
+        <a href="#film">影片</a>
+        <a href="#program">单元</a>
+        <a href="#info">信息</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">One-night online screening</p>
+          <h1>Film Celebration</h1>
+          <p>
+            一个简易线上电影节页面，主角就是你上传到 Google Drive 的这段视频。
+          </p>
+          <a class="button" href="#film">现在观看</a>
+        </div>
+        <div class="hero-frame" aria-hidden="true">
+          <div class="frame-line"></div>
+          <div class="frame-glow"></div>
+        </div>
+      </section>
+
+      <section id="film" class="section film-section">
+        <div class="section-title">
+          <p class="kicker">Featured film</p>
+          <h2>C0030</h2>
+        </div>
+
+        <div class="player-shell">
+          <iframe
+            id="drivePlayer"
+            class="player-embed"
+            title="C0030"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+          <div id="missingConfig" class="missing-config">
+            还没有填 Google Drive 文件 ID。打开 <code>config.js</code>，把
+            <code>PUT_GOOGLE_DRIVE_FILE_ID_HERE</code> 换成分享链接里的文件 ID。
+          </div>
+        </div>
+
+        <div class="film-meta">
+          <p>
+            这里可以写影片简介：拍摄时间、地点、主题，或者你想让观众进入影片前知道的一句话。
+          </p>
+          <dl>
+            <div>
+              <dt>文件</dt>
+              <dd>C0030.MP4</dd>
+            </div>
+            <div>
+              <dt>来源</dt>
+            <dd>Google Drive embed</dd>
+            </div>
+            <div>
+              <dt>形式</dt>
+              <dd>Online screening</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="program" class="section program-section">
+        <div class="section-title">
+          <p class="kicker">Program</p>
+          <h2>放映单元</h2>
+        </div>
+        <div class="program-grid">
+          <article>
+            <span>01</span>
+            <h3>Opening</h3>
+            <p>首页导入，让观众知道这是一个为这段影片搭建的小电影节。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Screening</h3>
+            <p>核心播放区，直接播放从 Google Drive 复制过来的 MP4 文件。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Notes</h3>
+            <p>可以继续加导演阐述、幕后照、时间表或观众留言。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="info" class="section info-section">
+        <p class="kicker">Info</p>
+        <h2>下一步可以换文案、片名和视觉</h2>
+        <p>
+          现在先保证 Colab 可以跑、视频可以播。等这个版本通了，再把页面改得更像正式电影节：加海报、日程、片单、购票或报名入口。
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Film Celebration</span>
+      <span>Powered by Python + Colab</span>
+    </footer>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
